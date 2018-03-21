@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by sangyuqi on 2018/3/21.
  */
 @Controller
-@RequestMapping(value = "/wedding")
 public class BaseController {
-    @RequestMapping(value = "/index",method = RequestMethod.GET,produces="application/json;charset=UTF-8")
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
     @ResponseBody
     public String init(){
         return "hello world";
+    }
+
+    @RequestMapping(value = "/login",method = {RequestMethod.GET,RequestMethod.POST})
+    @ResponseBody
+    public String login(){
+        return "请先登录";
     }
 
 }

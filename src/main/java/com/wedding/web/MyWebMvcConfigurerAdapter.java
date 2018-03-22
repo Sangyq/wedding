@@ -15,11 +15,11 @@ public class MyWebMvcConfigurerAdapter implements WebMvcConfigurer {
      * 重写拦截器
      * @param registry
      */
-    @Override
+    /*@Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/toLogin","/login");
+        registry.addInterceptor(new MyInterceptor()).addPathPatterns("*//**").excludePathPatterns("/toLogin","/login");
         WebMvcConfigurer.super.addInterceptors(registry);
-    }
+    }*/
 
     /**
      * 资源控制器
